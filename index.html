@@ -123,6 +123,22 @@ section { padding: 120px 48px; text-align: center; }
 .cert-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .cert-badge { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--accent); color: var(--accent); font-weight: 500; }
 
+/* ─── AI LAB ─── */
+#ailab { background: var(--bg); }
+.lab-intro { max-width: 640px; margin: 0 auto 56px; font-size: 15px; color: var(--text-dim); line-height: 1.8; }
+.lab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); max-width: 760px; margin: 0 auto; text-align: left; }
+.lab-card { background: var(--bg); padding: 40px 36px; transition: background 0.3s; display: flex; flex-direction: column; }
+.lab-card:hover { background: var(--bg2); }
+.lab-status { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--accent); color: var(--accent); font-weight: 500; align-self: flex-start; margin-bottom: 20px; }
+.lab-status.soon { border-color: var(--border); color: var(--text-dimmer); }
+.lab-name { font-family: var(--serif); font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+.lab-tagline { font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 16px; }
+.lab-desc { font-size: 13px; color: var(--text-dimmer); line-height: 1.7; margin-bottom: 24px; flex-grow: 1; }
+.lab-link { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s; align-self: flex-start; }
+.lab-link:hover { border-color: var(--accent); }
+.lab-card.placeholder { justify-content: center; align-items: center; text-align: center; color: var(--text-dimmer); }
+.lab-card.placeholder .lab-name { color: var(--text-dimmer); font-size: 18px; }
+
 /* ─── WORK ─── */
 #work { background: var(--bg2); }
 .timeline { max-width: 900px; margin: 0 auto; text-align: left; }
@@ -204,6 +220,7 @@ footer a { color: var(--accent); text-decoration: none; }
   section { padding: 80px 24px; }
   #hero { padding: 0 24px; }
   .skills-grid { grid-template-columns: 1fr; }
+  .lab-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
@@ -220,6 +237,7 @@ footer a { color: var(--accent); text-decoration: none; }
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#ailab">AI Lab</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#blog">Blog</a></li>
   </ul>
@@ -384,6 +402,26 @@ footer a { color: var(--accent); text-decoration: none; }
   </div>
   <div class="section-cta reveal">
     <a href="https://www.linkedin.com/in/oscarsa85/en" target="_blank" class="btn-ghost">View full profile on LinkedIn →</a>
+  </div>
+</section>
+
+<!-- AI LAB -->
+<section id="ailab">
+  <div class="section-label reveal">Built to Solve</div>
+  <h2 class="section-title reveal">AI <em>Lab</em></h2>
+  <p class="lab-intro reveal">I build AI-powered tools to solve real problems I run into — at work and beyond. This is where they live.</p>
+  <div class="lab-grid reveal">
+    <div class="lab-card">
+      <div class="lab-status">Live</div>
+      <div class="lab-name">RadarLens</div>
+      <div class="lab-tagline">AI Superpowers for Project Managers</div>
+      <div class="lab-desc">Turns project assessment from gut-feeling guesswork into a 60-second AI-powered analysis — risk register, stakeholder map, dependency map and mitigation plan, built for PMs who need answers, not more spreadsheets.</div>
+      <a href="https://radarlens.app" target="_blank" class="lab-link">Try it →</a>
+    </div>
+    <div class="lab-card placeholder">
+      <div class="lab-status soon">In the works</div>
+      <div class="lab-name">Next build</div>
+    </div>
   </div>
 </section>
 
