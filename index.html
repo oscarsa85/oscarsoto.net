@@ -131,7 +131,9 @@ section { padding: 120px 48px; text-align: center; }
 .lab-card:hover { background: var(--bg2); }
 .lab-status { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--accent); color: var(--accent); font-weight: 500; align-self: flex-start; margin-bottom: 20px; }
 .lab-status.soon { border-color: var(--border); color: var(--text-dimmer); }
-.lab-name { font-family: var(--serif); font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+.lab-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.lab-icon { flex-shrink: 0; }
+.lab-name { font-family: var(--serif); font-size: 24px; font-weight: 400; color: var(--text); }
 .lab-tagline { font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 16px; }
 .lab-desc { font-size: 13px; color: var(--text-dimmer); line-height: 1.7; margin-bottom: 24px; flex-grow: 1; }
 .lab-link { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s; align-self: flex-start; }
@@ -409,18 +411,36 @@ footer a { color: var(--accent); text-decoration: none; }
 <section id="ailab">
   <div class="section-label reveal">Built to Solve</div>
   <h2 class="section-title reveal">AI <em>Lab</em></h2>
-  <p class="lab-intro reveal">I build AI-powered tools to solve real problems I run into — at work and beyond. This is where they live.</p>
+  <p class="lab-intro reveal">I build AI tools to solve problems I run into. At work and beyond.</p>
   <div class="lab-grid reveal">
     <div class="lab-card">
       <div class="lab-status">Live</div>
-      <div class="lab-name">RadarLens</div>
+      <div class="lab-header">
+        <svg class="lab-icon" width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#4F46E5" stroke-width="2" opacity="0.3"/>
+          <circle cx="16" cy="16" r="9" stroke="#4F46E5" stroke-width="2" opacity="0.6"/>
+          <circle cx="16" cy="16" r="4" stroke="#4F46E5" stroke-width="2"/>
+          <circle cx="16" cy="16" r="2" fill="#06B6D4"/>
+          <line x1="16" y1="16" x2="27" y2="5" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="lab-name">RadarLens</div>
+      </div>
       <div class="lab-tagline">AI Superpowers for Project Managers</div>
       <div class="lab-desc">Turns project assessment from gut-feeling guesswork into a 60-second AI-powered analysis — risk register, stakeholder map, dependency map and mitigation plan, built for PMs who need answers, not more spreadsheets.</div>
       <a href="https://radarlens.app" target="_blank" class="lab-link">Try it →</a>
     </div>
-    <div class="lab-card placeholder">
-      <div class="lab-status soon">In the works</div>
-      <div class="lab-name">Next build</div>
+    <div class="lab-card">
+      <div class="lab-status">Live</div>
+      <div class="lab-header">
+        <svg class="lab-icon" width="22" height="22" viewBox="0 0 88 88" aria-hidden="true">
+          <rect x="8" y="8" width="72" height="72" rx="20" fill="#16A34A"/>
+          <path d="M27 45 L39 57 L61 31" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <div class="lab-name">MeetCheck</div>
+      </div>
+      <div class="lab-tagline">Paste the invite. We'll tell you if it's worth showing up.</div>
+      <div class="lab-desc">Turns your meeting invite into a 4-point structural verdict — clear agenda, decision on the table, right duration, needs to be live — plus the real cost of the room, calculated on the spot.</div>
+      <a href="https://meetcheck.app" target="_blank" class="lab-link">Try it →</a>
     </div>
   </div>
 </section>
